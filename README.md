@@ -17,7 +17,7 @@ At the start of each round, a terracotta block is placed in each player's invent
 
 ### 🎯 Normal Mode
 
-- 20 unique dance floor designs selected randomly each round.
+- 20 unique dance floor designs selected randomly each round. Design your own using [Color Party Dance Floor Designer](https://github.com/alexbates/ColorPartyDesigner).
 - 60% chance per round that **3 beacons** spawn on the dance floor, each granting a random powerup.
 
 ### 🔥 Crazy Mode
