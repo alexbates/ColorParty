@@ -1,0 +1,6 @@
+name: ColorPartyPlugin
+main: com.example.colorpartyplugin.ColorPartyPlugin
+version: 1.0
+api-version: 1.21
+description: A minigame plugin that mimics Hypixel Pixel Party.
+depend: [NoteBlockAPI]
