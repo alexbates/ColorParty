@@ -12,6 +12,8 @@ At the start of each round, a terracotta block is placed in each player's invent
   - **Amethyst Shard** for Crazy Mode
 - Game continues until all players fall except one.
 - After the game ends, players must click the Exit bed and rejoin via the NPC to reset the map.
+- Supports Java version 21 (tested with OpenJDK 21.0.3).
+- Supports Spigot version 1.21 (tested with 1.21.4 and 1.21.5).
 
 ## Game Modes
 
@@ -60,3 +62,44 @@ Triggered by clicking a spawned beacon:
 ![Screenshot 7](https://tamariapp.com/images/colorparty/7.png)
 
 ![Screenshot 8](https://tamariapp.com/images/colorparty/8.png)
+
+## Installation
+
+Download **ColorPartyPlugin.jar** from the [Releases](https://github.com/alexbates/ColorParty/releases) section and place it in the `plugins` directory of your Minecraft Spigot server.
+
+Please remember that you may experience difficulty if attempting to use versions other than OpenJDK 21 and Spigot 1.21.
+
+## Build from Source
+
+Building from source is recommended if you want to customize aspects of the game—such as the NPC spawn location or the return coordinates used when players right-click the *Exit* bed.
+
+### Steps to Build
+
+1. **Create a new IntelliJ IDEA project** named `ColorPartyPlugin`.
+
+2. **Project Structure**:
+   - Inside your project, create an `src` directory.
+   - Within `src`, create two packages:
+     - `com.example.colorpartyplugin` (copy all Java files here)
+     - `resources` (copy the following files here: `plugin.yml`, all `.nbs` files, and all `.json` files)
+
+3. **Configure Project SDK and Libraries**:
+   - Go to **File > Project Structure**.
+   - Under **Project**, set the SDK to **21 (Oracle OpenJDK)**.
+   - Under **Libraries**, add the following dependencies:
+     - `gson-2.9.1`
+     - `NoteBlockAPI-1.6.3`
+     - `spigot-api-1.21.4-R0.1-SNAPSHOT`
+
+4. **Artifacts Configuration**:
+   - Under **Artifacts**, make sure all `.json`, `.nbs`, and other resources are included at the root level of `ColorPartyPlugin.jar`.
+   - This may require manually adding each resource file.
+
+5. **Modules Setup**:
+   - Under **Modules**, ensure all libraries are selected for export.
+   - Set the scope for each library to **Provided**.
+
+6. **Build**:
+   - After applying all changes, use **Build > Build Artifacts > Build** to generate `ColorPartyPlugin.jar`.
+
+You can now place your newly built `.jar` file into your server’s `plugins` folder and restart the server to load your custom version of Color Party.
