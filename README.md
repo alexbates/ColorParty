@@ -65,7 +65,7 @@ Triggered by clicking a spawned beacon:
 
 ## Installation
 
-Download **ColorPartyPlugin.jar** from the [Releases](https://github.com/alexbates/ColorParty/releases) section and place it in the `plugins` directory of your Minecraft Spigot server.
+Download **ColorPartyPlugin.jar** from the [Releases](https://github.com/alexbates/ColorParty/releases) section and place it in the `plugins` directory of your Minecraft Spigot server. Extract colorpartyworld map to your server. The map includes the bridge around the dance floor. Without this map, the game will not function as you will immediately fall when joining the world.
 
 Please remember that you may experience difficulty if attempting to use versions other than OpenJDK 21 and Spigot 1.21.
 
